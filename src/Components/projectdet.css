@@ -1,0 +1,91 @@
+.body2 {
+    /* display: flex; */
+    justify-content: space-around;
+    margin-top: 10%;
+    margin-left: 25%;
+  }
+  
+  .project-details-box,
+  .student-details-box,
+  .files-box {
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    background-color: #f1f1f1;
+  }
+  
+  
+  .title,
+  .subtitle {
+    text-align: left;
+    font-size: 200%;
+    margin-bottom: 20px;
+  }
+  
+  .project-info {
+    font-size: 150%;
+    text-align: left;
+    /* border: 2px solid black; */
+    margin-top: 0;
+    margin-bottom: 3%;
+  }
+  
+  .student-table, .file-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+  
+  .student-table th,
+  .student-table td,
+  .file-table th,
+  .file-table td {
+    border: 1px solid #ddd;
+    /* padding: 10px; */
+    text-align: left;
+    font-size: 130%;
+  }
+  
+  .student-table th,
+  .file-table th {
+    background-color: #f2f2f2;
+  }
+  
+  /* .file-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .file-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  } */
+  
+  .file-item a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  
+  .icon1 {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    /* border: 2px solid black; */
+  }
+ 
+  
+  .actions-column {
+    display: flex;
+    gap: 10px;
+    
+  }

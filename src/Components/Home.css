@@ -1,0 +1,426 @@
+/* Home.css */
+
+body {
+  /* overflow-y: hidden; */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+
+}
+
+.body {
+  /* background-image: url('F:\5th sem\Minor_Project\cair\src\Components\logo.png'); */
+  background-color: white;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-image: url('F:\5th sem\Minor_Project\cair\src\Components\logo.jpeg'); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* Set the height of the body to 100% of the viewport height */
+  overflow-y: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(55, 50, 50);
+  /* opacity: 0.5; */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 35px;
+  display: flex;
+  justify-content: flex-end;
+  /* Align the navigation content to the right */
+  margin-right: 10%;
+  /* Offset the navigation content 20% from the right side */
+}
+
+/* .nav-link {
+    text-decoration: none;
+    color: rgb(18, 14, 20);
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 40%;
+   width: 10%;
+
+    border: 2px solid black;
+    
+  } */
+
+.nav-link2 {
+  text-decoration: none;
+  color: rgb(18, 14, 20);
+  font-weight: bold;
+  font-size: 30px;
+  /* Increase font size */
+  margin-left: 45%;
+  /* Adjust the spacing between navigation links */
+
+
+  /* border: 2px solid black; */
+  /* margin-right: 50px; */
+}
+
+.nav-link3 {
+  text-decoration: none;
+  color: rgb(18, 14, 20);
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: -50%;
+  margin-right: 30%;
+
+}
+
+.nav-link1:hover {
+  background-color: green;
+}
+
+
+
+.home p {
+  position: absolute;
+  top: 80%;
+  font-size: 22px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.photo {
+  margin-left: 45%;
+  margin-top: 5%;
+  overflow-x: hidden;
+  width: 50%;
+}
+
+.k1 {
+  position: absolute;
+  top: 28%;
+  text-decoration: solid;
+  color: #C72127;
+  font-size: 40px;
+  left: 7%;
+  /* border: 2px solid black; */
+}
+
+.k2 {
+  position: absolute;
+  top: 37%;
+  left: 7%;
+  color: rgb(24, 6, 48);
+  font-size: 75px;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px gray;
+  /* Add a shadow effect */
+}
+
+.k3 {
+  position: absolute;
+  top: 50%;
+  color: brown;
+  font-weight: bold;
+  font-size: 30px;
+  left: 7%;
+  text-align: left;
+  /* Center the text horizontally */
+  margin: auto;
+  /* Center the container itself horizontally */
+  width: 50%;
+  /* border: 2px solid black; */
+}
+
+.k3 p {
+  font-size: 40px;
+}
+
+/* .k4{
+  position:absolute; 
+  cursor: pointer;
+  left: 7%;
+  top:65%;
+  width:40%;
+  font-size:15px;
+  color: brown;
+  border-radius: 4px;
+ 
+  border: none;
+} */
+
+.k4 {
+  position: absolute;
+  cursor: pointer;
+  left: 7%;
+  top: 65%;
+  width: 16%;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(240, 234, 234);
+  border-radius: 4px;
+  /* background-color:rgb(43, 8, 90); */
+  background-color: #C72127;
+  border: none;
+  padding: 9px;
+}
+
+/* .nav-link1 {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(239, 233, 241);
+  font-size: 28px;
+  background-color: #C72127;
+  border-radius: 4px;
+  padding-right:15px;
+  padding-left: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+  border: 2px solid black;
+} */
+
+.nav-link1 {
+  text-decoration: none;
+  color: rgb(18, 14, 20);
+  font-weight: bold;
+  font-size: 30px;
+  /* Increase font size */
+  margin-left: 120%;
+  margin-top: 1%;
+  background-color: #C72127;
+  color: aliceblue;
+  border-radius: 4px;
+  padding-right: 15px;
+  padding-left: 10%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid black;
+
+}
+
+
+.k4 a {
+  text-decoration: none;
+  /* Remove underline */
+  color: inherit;
+  /* Inherit color from parent (.k4) */
+}
+
+.photo2 {
+  margin-top: 10.2%;
+  margin-left: 45%;
+  overflow-x: hidden;
+  width: 50%;
+}
+
+.a1 {
+  position: absolute;
+  font-size: 28px;
+  top: 10%;
+  left: 4%;
+  padding-bottom: 4%;
+  color: rgb(43, 8, 90);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  width: 36%;
+  justify-content: left;
+  text-align: justify;
+}
+
+.a2 {
+  position: absolute;
+  font-size: 28px;
+  top: 33%;
+  left: 4%;
+  padding-bottom: 4%;
+  color: rgb(43, 8, 90);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.a3 {
+  position: absolute;
+  font-size: 28px;
+  top: 43%;
+  left: 4%;
+  padding-bottom: 4%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: rgb(43, 8, 90);
+}
+
+.a4 {
+  position: absolute;
+  font-size: 28px;
+  top: 53%;
+  left: 4%;
+  padding-bottom: 4%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: rgb(43, 8, 90);
+}
+
+.a5 {
+  position: absolute;
+  font-size: 28px;
+  top: 63%;
+  left: 4%;
+  padding-bottom: 4%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: rgb(43, 8, 90);
+}
+
+.a6 {
+  position: absolute;
+  font-size: 28px;
+  top: 73%;
+  left: 4%;
+  padding-bottom: 4%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: rgb(43, 8, 90);
+}
+
+.content {
+  padding: 20px;
+}
+
+/* .a1::before {
+    content:'\2022';
+    color:rgb(43, 8, 90);
+    font-weight:800;
+    margin-right: 5px; 
+    font-size: 40px;
+  } */
+
+.a2::before {
+  content: '\2022';
+  /* Add arrow character */
+  color: rgb(43, 8, 90);
+  /* Change arrow color */
+  font-weight: 800;
+  margin-right: 5px;
+  font-size: 40px;
+  /* Add space between arrow and text */
+}
+
+.a3::before {
+  content: '\2022';
+  /* Add arrow character */
+  color: rgb(43, 8, 90);
+  /* Change arrow color */
+  font-weight: 800;
+  margin-right: 5px;
+  font-size: 40px;
+  /* Add space between arrow and text */
+}
+
+.a4::before {
+  content: '\2022';
+  /* Add arrow character */
+  color: rgb(43, 8, 90);
+  /* Change arrow color */
+  font-weight: 800;
+  margin-right: 5px;
+  font-size: 40px;
+  /* Add space between arrow and text */
+}
+
+.a5::before {
+  content: '\2022';
+  /* Add arrow character */
+  color: rgb(43, 8, 90);
+  /* Change arrow color */
+  font-weight: 800;
+  margin-right: 5px;
+  font-size: 40px;
+  /* Add space between arrow and text */
+}
+
+.a6::before {
+  content: '\2022';
+  /* Add arrow character */
+  color: rgb(43, 8, 90);
+  /* Change arrow color */
+  font-weight: 800;
+  margin-right: 5px;
+  font-size: 40px;
+  /* Add space between arrow and text */
+}
+
+/* Home.css */
+
+.navbar {
+  background-color: rgb(211, 211, 211);
+  color: white;
+  /* padding: 0.1%; Example padding */
+  display: flex;
+  height: 13.5%;
+  align-items: center;
+  /* Center items vertically */
+  justify-content: space-between;
+  /* Spread items evenly */
+  margin-top: 0;
+}
+
+.logo {
+  /* width: 100px;  */
+  margin: 0%;
+  /* height: 100px; */
+  overflow: hidden;
+  /* border-radius: 50%; */
+}
+
+.logo img {
+  margin-top: 1%;
+  width: 80%;
+  height: 100%;
+  /* border: 2px solid black; */
+}
+
+.logo1 {
+  /* width: 100px;  */
+  margin: 0%;
+  /* height: 100px; */
+  overflow: hidden;
+  /* border-radius: 50%; */
+}
+
+.logo1 img {
+  /* margin-top: 3%; */
+  margin-left: 2%;
+  width: 75%;
+  height: 90%;
+  /* border: 2px solid black; */
+}
+
+.na {
+  display: flex;
+  color: rgb(13, 2, 44);
+  margin: 0;
+  /* Remove margin */
+  padding: 0.1%;
+  width: 30%;
+  margin-left: 0%;
+  font-size: 26px;
+  /* margin-top:0.35%; */
+  overflow-y: hidden;
+  border: 2px solid black;
+}
+
+.na:hover {
+  color: brown;
+}
+
+.acc {
+  margin-left: 10%;
+}

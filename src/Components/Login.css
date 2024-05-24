@@ -1,0 +1,226 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* Setting the font family */
+  margin: 0;
+  /* Removing default margin */
+  padding: 0;
+  /* Removing default padding */
+  background-size: cover;
+  /* Covering the entire background */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Centering the background image */
+  overflow-x: hidden;
+}
+
+.kavya {
+  cursor: pointer;
+  width: 95%;
+  font-size: 30px;
+  color: rgb(240, 234, 234);
+  border-radius: 4px;
+  background-color: rgb(71, 67, 67);
+  border: none;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 3%;
+  margin-top: 6%;
+  margin-right: 5%;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+  font-size: larger;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 90%;
+  padding: 10px;
+  background-color: rgb(22, 163, 219);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* Setting the font family */
+  font-weight: bold;
+  border: 2px solid black;
+
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 8%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+header {
+  background-color: rgba(43, 161, 207);
+  color: rgb(70, 137, 231);
+}
+
+footer {
+  background-color: rgba(43, 161, 207);
+  color: rgb(70, 137, 231);
+  margin-top: 9%;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: whitesmoke;
+  padding-left: 70px;
+  font-size: 20px;
+}
+
+.logo {
+  align-self: flex-start;
+}
+
+nav {
+  align-self: flex-end;
+}
+
+
+
+
+.id1 {
+  padding-top: 20px;
+  color: rgb(5, 5, 107);
+  margin-top: 30px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.contact1 {
+  width: 450px;
+  margin: 18vh auto 0 auto;
+  padding: 30px;
+  margin-left: 35%;
+  background-color: rgb(215, 215, 215);
+  border-radius: 13px;
+  font-size: 18px;
+  box-shadow: 0 0 5px rgb(168, 168, 168);
+  border: 3px solid rgb(4, 4, 31);
+  opacity: 0.5;
+  margin-top: 13%;
+  height: 150%;
+  padding-bottom: 5%;
+}
+
+.body1 {
+  background-image: url("./p3.jpg");
+  /* background-color: rgb(159, 158, 158); */
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.n1 {
+  display: flex;
+}
+
+.photo1 {
+  margin-top: 10%;
+  margin-left: 3%;
+
+}
+
+.photo1 img {
+  width: 95%;
+}
+
+.contact2 {
+  width: 480px;
+  margin: 10vh auto 0 auto;
+  padding: 30px;
+  margin-left: 35%;
+  background-color: rgb(215, 215, 215);
+  border-radius: 13px;
+  font-size: 18px;
+  box-shadow: 0 0 5px gray;
+  border: 3px solid rgb(4, 4, 31);
+  opacity: 0.5;
+  margin-top: 10%;
+  color: black;
+}
+
+.f1 {
+  color: black;
+  margin-top: 50%;
+  /* border: 2px solid black; */
+}
+
+.kavya1 {
+  cursor: pointer;
+  width: 95%;
+  font-size: 30px;
+  color: rgb(240, 234, 234);
+  border-radius: 4px;
+  background-color: rgb(71, 67, 67);
+  border: none;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 3%;
+  margin-top: 6%;
+  margin-right: 5%;
+
+}
+
+.contact label {
+  color: rgb(19, 9, 40);
+  font-weight: bold;
+}
+
+.contact input {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 5px;
+  border-width: 3px;
+  font-size: 18px;
+  padding: 13px;
+  color: black;
+  width: 95%;
+  border-color: rgb(31, 29, 29);
+  border: 2px solid rgb(4, 4, 31);
+  /* Add some transparency to make the background image visible */
+}
+
+.ash {
+  margin-top: 3%;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(4, 4, 31);
+  ;
+}

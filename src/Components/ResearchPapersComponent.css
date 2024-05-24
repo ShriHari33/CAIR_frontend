@@ -1,0 +1,39 @@
+.research-table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.research-table th,
+.research-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.research-table th {
+    table-layout: auto;
+    padding-top: 200px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+
+.project-details {
+    margin-bottom: 10px;
+}
+
+.sl-no {
+    width: 4%;
+}
+
+.project-name {
+    max-width: 100px;
+    /* Adjust this value to suit your needs */
+    word-wrap: break-word;
+}
+
+.faculty-name {
+    max-width: 200px;
+    /* Adjust this value to suit your needs */
+    word-wrap: break-word;
+}

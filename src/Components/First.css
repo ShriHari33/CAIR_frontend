@@ -1,0 +1,797 @@
+/* The sidebar menu */
+body {
+  background-color: #fff;
+  /* Set background color to white */
+  margin: 0;
+  /* Remove default margin */
+  font-family: Arial, sans-serif;
+  /* Set default font family */
+}
+
+.sidenav {
+  height: 90%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 250px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 13.8%;
+  /* Stay at the top */
+  left: 0;
+  /* background-color: #b3afaf; Black */
+  /* background-color: rgb(211, 211, 211); */
+  background-color: #C72127;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  /* color: #342b3f; */
+  color: white;
+
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px;
+  /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  width: 42%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-top: 3.7%;
+  display: flex;
+  height: 52%;
+  padding: 0.5%;
+  /* border: 2px solid black; */
+}
+
+.topnav1 {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16%;
+  margin-top: 5%;
+  display: flex;
+  height: 50%;
+  padding: 0.5%;
+  /* border: 2px solid black; */
+}
+
+.top {
+  display: flex;
+  margin-top: 6%;
+  margin-bottom: 2%;
+  /* justify-content: space-around; */
+  /* border: 2px solid black; */
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type="text"] {
+  float: left;
+  padding: 15px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 2%;
+  font-size: 17px;
+  height: 50%;
+}
+
+/* Style the button inside the navigation bar */
+.button {
+  padding: 15%;
+  /* background-color: #4CAF50; */
+  background-color: #C72127;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 30%;
+  margin-left: 160%;
+  width: 160%;
+  font-size: 25px;
+}
+
+.plus-icon {
+  margin-right: 10px;
+  /* Add spacing between the plus icon and the button text */
+  font-size: 30px;
+  /* Increase the font size of the plus icon */
+  line-height: 1;
+  /* Ensure the icon is vertically centered with the text */
+  color: rgb(255, 255, 255);
+  /* Change the color of the plus icon */
+  font-weight: bold;
+  /* Make the plus icon appear bold */
+}
+
+.button1 {
+  padding: 15%;
+  /* background-color: #4CAF50; */
+  background-color: #C72127;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 56%;
+  margin-left: 685%;
+  width: 160%;
+  font-size: 25px;
+}
+
+
+
+/* When the screen is less than 600px wide, stack the links, search field, and button vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
+
+.topnav img {
+  width: 5%;
+  height: 3%;
+  margin-left: 0;
+}
+
+.topnav1 img {
+  width: 5%;
+  height: 3%;
+  margin-left: 0;
+}
+
+
+
+
+/* Table styles */
+.table-container {
+  overflow-x: auto;
+  margin-left: 15%;
+  margin-top: 4%;
+  border-radius: 7px;
+  /* border: 2px solid black; */
+  width: 80%;
+  font-size: 130%;
+
+}
+
+table {
+  width: 120%;
+  border-collapse: collapse;
+}
+
+/* table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  width: 400px;
+} */
+
+
+
+table td {
+  text-decoration: none;
+  color: black;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+.t1 {
+  border-top-right-radius: 7px;
+  /* Radius for top-right corner */
+  border-bottom-right-radius: 7px;
+  text-align: center;
+  width: 10%;
+  /* border: 2px solid black; */
+
+}
+
+.t4 {
+  display: flex;
+}
+
+/* Container styles */
+.custom-select {
+  width: 40%;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  /* border: 2px solid black; */
+  margin-top: 1.5%;
+  margin-left: 10%;
+  margin-bottom: 1.5%;
+}
+
+/* Heading styles */
+.custom-select h3 {
+  display: inline-block;
+  /* Display heading inline */
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 1.5%;
+  margin-right: 10px;
+  /* Add spacing between heading and select */
+  /* border: 2px solid black; */
+  width: 30%;
+  text-align: left;
+
+}
+
+/* Select wrapper styles */
+.select-wrapper {
+  display: inline-block;
+  /* Display select wrapper inline */
+  margin-left: 10%;
+  margin-top: 1.5%;
+  width: 49%;
+
+  /* border: 2px solid black; */
+}
+
+/* Select element styles */
+.custom-select select {
+  width: 150px;
+  /* Adjust the width of the select box */
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  /* Remove default appearance */
+  -webkit-appearance: none;
+  /* For older versions of Chrome/Safari */
+  background-color: #fff;
+  /* border: 2px solid black; */
+  width: 170%;
+  padding: 7%;
+  color: #555555;
+
+}
+
+/* Arrow icon styles */
+.custom-select select::after {
+  content: '\25BC';
+  /* Unicode for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #000000;
+  /* Arrow icon color */
+}
+
+/* Hover and focus styles */
+.custom-select select:hover,
+.custom-select select:focus {
+  border-color: black;
+  /* Border color on hover/focus */
+  outline: none;
+  /* Remove default focus outline */
+}
+
+
+.box {
+  border: 2px solid #f1f1f1;
+  width: 70%;
+  margin-left: 17%;
+  margin-top: 1.5%;
+  background-color: #f1f1f1;
+}
+
+.project {
+  width: 50%;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  /* border: 2px solid black; */
+  margin-top: 1.5%;
+  margin-left: 10%;
+  margin-bottom: 1.5%;
+}
+
+.project input {
+  margin-left: 7.7%;
+  font-size: 18px;
+  padding: 2.8%;
+  color: #464646;
+  width: 150%;
+}
+
+.project ::placeholder {
+  color: #5c5b5b;
+}
+
+.project h3 {
+  display: inline-block;
+  /* Display heading inline */
+  font-size: 18px;
+  color: #333;
+  width: 60%;
+  /* border: 2px solid black; */
+  margin-top: 10px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+.project input:hover,
+.project input:focus {
+  border-color: black;
+  /* Border color on hover/focus */
+  outline: none;
+  /* Remove default focus outline */
+}
+
+.but {
+  display: flex;
+  width: 95%;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  /* border: 2px solid black; */
+
+}
+
+.b1 {
+  width: 25%;
+  margin-left: 9%;
+  background-color: #f2f2f2;
+  color: rgb(51, 51, 54);
+  border: 1.5px solid #09080a;
+}
+
+.b1:hover {
+  border-color: blue;
+  background-color: #a2a1a1;
+}
+
+.b2 {
+  width: 25%;
+  margin-left: 50%;
+}
+
+.student-details {
+  display: flex;
+  /* border: 2px solid black; */
+  width: 90%;
+  margin-left: 6%;
+  margin-top: 3%;
+
+}
+
+.student-details input {
+  font-size: 18px;
+  padding: 2%;
+  color: #464646;
+  width: 100%;
+}
+
+table {
+  /* border: 2px solid black; */
+  width: 90%;
+  margin-left: 6%;
+  background-color: aliceblue;
+  border: 2px solid black;
+}
+
+.b3 {
+  margin-top: 2%;
+  width: 20%;
+  padding: 1%;
+  border: 2px solid black;
+}
+
+.t2 {
+  /* border: 2px solid black; */
+  margin-left: 0;
+  border: 2px solid black;
+}
+
+.edit-icon {
+  /* border: 2px solid black; */
+  /* margin-left: 3%; */
+  width: 90%;
+  height: 90%;
+  border: 2px solid green;
+}
+
+.edit-icon2 {
+  /* border: 2px solid black; */
+  margin-right: 2.5%;
+  width: 32%;
+  height: 100%;
+  border: 2px solid red;
+}
+
+.t3 {
+  text-align: center;
+}
+
+select option {
+  font-weight: bold;
+}
+
+/* Add a black border around the select box */
+select {
+  border: 2px solid black;
+}
+
+.files {
+  margin-top: 10%;
+  width: 50%;
+}
+
+.files {
+  margin-top: 12%;
+  width: 50%;
+}
+
+.box1 {
+  margin-top: 10%;
+  margin-left: 17%;
+  border: 2px solid #f1f1f1;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; */
+  /* background: #5256ad; */
+}
+
+.drag-area {
+  border: 2px dashed #fff;
+  height: 500px;
+  width: 700px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #444891;
+  margin-left: 30%;
+  margin-top: 13%;
+}
+
+.drag-area.active {
+  border: 2px solid #fff;
+}
+
+.drag-area .icon {
+  font-size: 100px;
+  color: #fff;
+}
+
+.drag-area header {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #444891;
+}
+
+.drag-area button:hover {
+  background-color: #08e910;
+}
+
+.drag-area span {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+  padding: 20px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  margin-top: 5%;
+}
+
+.drag-area img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.selected-file {
+  margin-top: 1%;
+  color: #000000;
+}
+
+
+
+sidenav {
+  height: 100%;
+  width: 250px;
+  /* Adjust the width as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  /* Adds a slight shadow to the right */
+  padding-top: 20px;
+}
+
+.sidenav .nav-section {
+  padding: 0 15px;
+}
+
+.sidenav h2 {
+  font-size: 23px;
+  color: #939393;
+  margin-bottom: 8px;
+  margin-left: 1%;
+  /* border: 2px solid black; */
+  text-align: left;
+}
+
+.sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 22px;
+  /* color: #333;  */
+  color: white;
+
+  display: flex;
+  /* Use flexbox to align icon and text */
+  align-items: center;
+  border-radius: 4px;
+}
+
+.sidenav a .icon-dashboard,
+.sidenav a .icon-medicines,
+.sidenav a .icon-billings,
+.sidenav a .icon-customers,
+.sidenav a .icon-managers {
+  margin-right: 10px;
+  /* Space between icons and text */
+}
+
+.sidenav a:hover {
+  background-color: #d84c50;
+}
+
+/* .sidenav a.active {
+  color: #ffffff; 
+} */
+
+.sidenav a.active .icon-dashboard {
+  color: #ffffff;
+  /* Icon color for active */
+
+}
+
+/* Optional: Icons as placeholders */
+.icon-dashboard::before,
+.icon-medicines::before,
+.icon-billings::before,
+.icon-customers::before,
+.icon-managers::before {
+  content: "\1F4C8";
+  /* Unicode character as placeholder */
+  /* You can replace this with an actual icon font or an svg if desired */
+}
+
+.icon-medicines::before {
+  content: "\1F4C3";
+  /* Unicode character as placeholder */
+}
+
+.icon-billings::before {
+  content: "\1F4B8";
+  /* Unicode character as placeholder */
+}
+
+.icon-customers::before {
+  content: "\1F465";
+  /* Unicode character as placeholder */
+}
+
+.icon-managers::before {
+  content: "\1F464";
+  /* Unicode character as placeholder */
+}
+
+
+/* body {
+  background-color: #F4F8FC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.container1 {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10%;
+}
+
+.top-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card .title {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.card .value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card.out-of-stock .value {
+  color: #FF6584;
+}
+
+.card.low-stock .value {
+  color: #FFA84B;
+}
+
+.card.to-arrive .value {
+  color: #67C23A;
+}
+
+.chart-section {
+  background-color: #F4F8FC;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chart img {
+  max-width: 100%;
+  height: auto;
+}
+
+.legend {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dot.low {
+  background-color: #FFA84B;
+}
+
+.dot.arriving {
+  background-color: #67C23A;
+}
+
+.dot.out-of {
+  background-color: #FF6584;
+}
+
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.chart {
+  width: 80%;
+  max-width: 800px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  /* margin-top: 10%; */
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
