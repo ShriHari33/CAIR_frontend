@@ -106,6 +106,10 @@ const Table = () => {
         />
 
         <div>
+          <h1 style={{ margin: -40, marginTop: '-15%' }}>Welcome {localStorage.getItem('facultyName') ? localStorage.getItem('facultyName') + "!" : "User!"}</h1>
+        </div>
+
+        <div>
           <button className="button" onClick={handleAddProjectClick}>
             <span className="plus-icon">&#43;</span>
             Add a Project

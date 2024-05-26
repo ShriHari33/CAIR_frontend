@@ -121,7 +121,7 @@ body {
   border-radius: 3px;
   cursor: pointer;
   margin-top: 35%;
-  margin-left: 250%;
+  margin-left: 290%;
   width: 150%;
   font-size: 25px;
 }
@@ -801,7 +801,7 @@ sidenav {
 .search-bar {
   overflow: hidden;
   background-color: #e9e9e9;
-  width: 42%;
+  width: 35%;
   align-items: center;
   justify-content: center;
   margin-left: 6%;
@@ -822,8 +822,3 @@ sidenav {
   border-color: #007BFF;
 }
 
-
-/* .welcome-message {
-  margin: 0;
-  margin-top: 0.5%;
-} */
