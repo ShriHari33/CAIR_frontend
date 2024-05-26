@@ -113,16 +113,16 @@ body {
 
 /* Style the button inside the navigation bar */
 .button {
-  padding: 15%;
+  padding: 5%;
   /* background-color: #4CAF50; */
   background-color: #C72127;
   color: white;
-  border: none;
+  border: 2px solid black;
   border-radius: 3px;
   cursor: pointer;
-  margin-top: 30%;
-  margin-left: 160%;
-  width: 160%;
+  margin-top: 35%;
+  margin-left: 250%;
+  width: 150%;
   font-size: 25px;
 }
 
@@ -440,7 +440,7 @@ table {
 .edit-icon2 {
   /* border: 2px solid black; */
   margin-right: 2.5%;
-  width: 32%;
+  width: 29%;
   height: 100%;
   border: 2px solid red;
 }
@@ -795,3 +795,35 @@ sidenav {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
+
+
+/* Table.css */
+.search-bar {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  width: 42%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6%;
+  margin-top: 3.7%;
+  display: flex;
+  height: 52%;
+  padding: 0.5%;
+  /* border: 2px solid black; */
+}
+
+.search-bar:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.search-bar:hover {
+  border-color: #007BFF;
+}
+
+
+/* .welcome-message {
+  margin: 0;
+  margin-top: 0.5%;
+} */

@@ -141,6 +141,16 @@ const Login = () => {
     toast.success("Login successful");
     // Save email to local storage
     localStorage.setItem("email", email);
+    localStorage.setItem("facultyName", user.name);
+
+    // const response = axios.get("http://localhost:8084/api/v1/cair/faculty/${email}");
+
+    // if (response.data.role === "admin") {
+    //   navigate("/First");
+    // }
+
+    // localStorage.setItem("facultyName", response.data);
+
     navigate("/First");
   };
 

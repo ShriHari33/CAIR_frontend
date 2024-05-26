@@ -4,6 +4,9 @@ import "./First.css"; // Import CSS file for styling
 import Picture1 from "./Picture1.png"; // Import your logo image
 
 
+
+
+
 function Navbar({ hideLogout }) {
   return (
     <div>
@@ -14,6 +17,11 @@ function Navbar({ hideLogout }) {
         {/* <div className="na">
         <h1>Scholar Hub</h1>
       </div> */}
+        <div>
+          {/* <h2>Welcome {localStorage.getItem('facultyName') ? localStorage.getItem('facultyName') : "User"}</h2> */}
+          {/* <h2>Welcome User</h2> */}
+          {/* <h1>{localStorage.getItem('email')}</h1> */}
+        </div>
         <ul>
           <li>
             <Link className="nav-link3" to="/">

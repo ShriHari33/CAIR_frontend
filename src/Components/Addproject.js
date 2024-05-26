@@ -30,7 +30,7 @@ function Addproject() {
 
   const loadCairData = async () => {
     try {
-      const email= localStorage.getItem("email");
+      const email = localStorage.getItem("email");
 
       // const response = await axios.get("http://localhost:8084/api/v1/cair/getAll");
       const response = await axios.get(`http://localhost:8084/api/v1/cair/details/${email}`);
@@ -44,6 +44,10 @@ function Addproject() {
     } catch (error) {
       console.error("Error fetching Cair data:", error);
     }
+  };
+
+  const goBack = () => {
+    navigate("/");
   };
 
   const save = async (event) => {
@@ -74,17 +78,18 @@ function Addproject() {
       // setProjects([ newProject,...projects]);
 
 
-       // Update projects array in state by appending the new project
-    setProjects([...projects, newProject]);
+      // Update projects array in state by appending the new project
+      setProjects([...projects, newProject]);
 
-    // Save projects array to the backend
+      // Save projects array to the backend
       const response = await axios.post("http://localhost:8084/api/v1/cair/save", {
-      name: localStorage.getItem("name"),
-      email: localStorage.getItem("email"),
-      password: localStorage.getItem("password"),
-      confirmPassword: localStorage.getItem("confirmPassword"),
-      projects: [...projects, newProject] // Send the updated projects array to the backend
-    });
+        name: localStorage.getItem("name"),
+        email: localStorage.getItem("email"),
+        password: localStorage.getItem("password"),
+        confirmPassword: localStorage.getItem("confirmPassword"),
+        // projects: [...projects, newProject] // Send the updated projects array to the backend
+        projects: [newProject] // Send the updated projects array to the backend
+      });
 
       // console.log("Updated Projects:", updatedProjects);
       console.log(response.data);
@@ -135,7 +140,7 @@ function Addproject() {
     navigate("/Addproject");
   };
 
-  
+
   return (
     <div>
       <Navbar></Navbar>
@@ -148,12 +153,12 @@ function Addproject() {
           <img src={search} alt="Search" />
         </div> */}
 
-        <div>
+        {/* <div>
           <button className="button1" onClick={handleAddProjectClick}>
             <span className="plus-icon">&#43;</span>
             Add a Project
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="box">
@@ -175,19 +180,23 @@ function Addproject() {
               <div className="select-wrapper">
                 <select value={projectType} onChange={(e) => setProjectType(e.target.value)} required>
                   <option >Select Project</option>
-                  <option id="odd1" name="odd1" value="odd1" >Project 1 (Odd)</option>
-                  <option id="odd2" name="odd2" value="odd2" >Project 2 (Odd)</option>
+                  {/* <option id="odd1" name="odd1" value="odd1" >Project 1 (Odd)</option> */}
+                  <option id="miniProj" name="miniProj" value="miniProj" >Mini Project</option>
+                  {/* <option id="odd2" name="odd2" value="odd2" >Project 2 (Odd)</option> */}
+                  <option id="REU" name="REU" value="REU" >Research Experiences for Undergraduates (REU)</option>
+                  {/* <option id="odd2" name="odd2" value="odd2" >Project 2 (Odd)</option> */}
+                  <option id="SDP" name="SDP" value="SDP" >Senior Design Project (SDP)</option>
                 </select>
               </div>
             </div>
             <div className="project">
               <h3>Project Title</h3>
-              <input type="text" name="pname" id="pname" value={pname} placeholder="Project Title" onChange={(e) => setPname(e.target.value)} required/>
+              <input type="text" name="pname" id="pname" value={pname} placeholder="Project Title" onChange={(e) => setPname(e.target.value)} required />
             </div>
 
             <div className="project">
               <h3>Year</h3>
-              <input type="number" name="year" id="year" value={year} placeholder="Year" onChange={(e) => setYear(e.target.value)} required/>
+              <input type="number" name="year" id="year" value={year} placeholder="Year" onChange={(e) => setYear(e.target.value)} required />
             </div>
             <div className="custom-select">
               <h3>Domain</h3>
@@ -197,6 +206,8 @@ function Addproject() {
                   <option id="AI/ML" name="AI/ML" value="AI/ML" >AI/ML</option>
                   <option id="Cloud" name="Cloud" value="Cloud" >Cloud</option>
                   <option id="HPC" name="HPC" value="HPC" >HPC</option>
+                  <option id="ISHA" name="ISHA" value="ISHA" >ISHA</option>
+                  <option id="DataScience" name="DataScience" value="DataScience" >Data Science</option>
                   {/* Add more even semester projects as needed */}
                 </select>
               </div>
@@ -277,35 +288,40 @@ function Addproject() {
           </>
         )}
 
-{selectedSemester === "even" && (
+        {selectedSemester === "even" && (
           <>
             <div className="custom-select">
               <h3>Project Type</h3>
               <div className="select-wrapper">
                 <select value={projectType} onChange={(e) => setProjectType(e.target.value)} required>
                   <option value="0">Select Project</option>
-                  <option id="even1" name="even1" value="even1" >Project 1 (Even)</option>
-                  <option id="even2" name="even2" value="even2" >Project 2 (Even)</option>
+                  {/* <option id="even1" name="even1" value="even1" >Project 1 (Even)</option> */}
+                  <option id="minorProject1" name="minorProject1" value="minorProject1" >Minor Project 1</option>
+                  {/* <option id="even2" name="even2" value="even2" >Project 2 (Even)</option> */}
+                  <option id="minorProject2" name="minorProject2" value="minorProject2" >Minor Project 2</option>
+                  <option id="Internship" name="Internship" value="Internship" >Internship</option>
                 </select>
               </div>
             </div>
             <div className="project">
               <h3>Project Title</h3>
-              <input type="text" name="pname" id="pname" value={pname} placeholder="Project Title" onChange={(e) => setPname(e.target.value)} required/>
+              <input type="text" name="pname" id="pname" value={pname} placeholder="Project Title" onChange={(e) => setPname(e.target.value)} required />
             </div>
 
             <div className="project">
               <h3>Year</h3>
-              <input type="number" name="year" id="year" value={year} placeholder="Year" onChange={(e) => setYear(e.target.value)} required/>
+              <input type="number" name="year" id="year" value={year} placeholder="Year" onChange={(e) => setYear(e.target.value)} required />
             </div>
             <div className="custom-select">
               <h3>Domain</h3>
               <div className="select-wrapper">
                 <select value={domain} onChange={(e) => setDomain(e.target.value)} required>
-                  <option value="a">Select Domain</option>
+                  <option >Select Domain</option>
                   <option id="AI/ML" name="AI/ML" value="AI/ML" >AI/ML</option>
                   <option id="Cloud" name="Cloud" value="Cloud" >Cloud</option>
                   <option id="HPC" name="HPC" value="HPC" >HPC</option>
+                  <option id="ISHA" name="ISHA" value="ISHA" >ISHA</option>
+                  <option id="DataScience" name="DataScience" value="DataScience" >Data Science</option>
                   {/* Add more even semester projects as needed */}
                 </select>
               </div>
@@ -376,7 +392,7 @@ function Addproject() {
             </button>
 
             <div className="but">
-              <button type="button" className="b1">
+              <button type="button" className="b1" onClick={goBack}>
                 Cancel
               </button>
               <button type="button" className="b2" onClick={save}>

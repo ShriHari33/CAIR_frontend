@@ -10,12 +10,11 @@ import { useNavigate } from "react-router-dom";
 
 const Table = () => {
   const [cairs, setCairs] = useState([]); // Initialize to an empty array
-  const [searchYear, setSearchYear] = useState('');
+  // const [searchYear, setSearchYear] = useState('');
   const navigate = useNavigate(); // Import useNavigate from react-router-dom
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedDomain, setSelectedDomain] = useState('');
-
-
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     fetchCairDetails();
@@ -35,9 +34,9 @@ const Table = () => {
     }
   };
 
-  const handleSearchChange = (e) => {
-    setSearchYear(e.target.value);
-  };
+  // const handleSearchChange = (e) => {
+  //   setSearchYear(e.target.value);
+  // };
 
   // const handleDelete = async (cairId, projectIndex) => {
   //   try {
@@ -92,11 +91,19 @@ const Table = () => {
   return (
     <div className="table-container">
       <div className="top">
-        <div className="topnav">
+        {/* <div className="topnav">
           <input type="text" placeholder="Search.." value={searchYear}
             onChange={handleSearchChange} />
           <img src={search} alt="Search" />
-        </div>
+        </div> */}
+
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search by project name"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
 
         <div>
           <button className="button" onClick={handleAddProjectClick}>
@@ -128,11 +135,14 @@ const Table = () => {
 
             <th className='t3'>
               <select value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)}>
+
                 <option value="" >All Years</option>
                 <option value="2020">2020</option>
                 <option value="2021">2021</option>
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
+                <option value="2024">2024</option>
+
               </select>
             </th>
             <select value={selectedDomain} onChange={(e) => setSelectedDomain(e.target.value)}>
@@ -140,9 +150,11 @@ const Table = () => {
               <option value="AI/ML">AI/ML</option>
               <option value="Cloud">Cloud</option>
               <option value="HPC">HPC</option>
+              <option value="DataScience">Data Science</option>
+              <option value="ISHA">ISHA</option>
             </select>
 
-            <th>Guide Name</th>
+            {/* <th>Guide Name</th> */}
             <th className='t1'>Actions</th>
           </tr>
         </thead>
@@ -152,7 +164,7 @@ const Table = () => {
               const slNo = index * cairs.length + projectIndex + 1;
               // Check if search year matches project year or if search year is empty.
               // The search can happen with just the last 2 digits of the year as well, to be more flexible.
-              if ((selectedYear === '' || project.year === selectedYear) && (selectedDomain === '' || project.domain === selectedDomain)) {
+              if ((selectedYear === '' || project.year === selectedYear) && (selectedDomain === '' || project.domain === selectedDomain) && (searchTerm === '' || (project.pname && project.pname.toLowerCase().includes(searchTerm.toLowerCase())))) {
                 return (
                   <tr key={`${index}-${projectIndex}`}>
                     <td>{slNo}</td>
@@ -162,7 +174,7 @@ const Table = () => {
                     <td>{project.projectType}</td>
                     <td className='t3'>{project.year}</td>
                     <td className='t3'>{project.domain}</td>
-                    <td>{cair.name}</td>
+                    {/* <td>{cair.name}</td> */}
                     <td>
                       <div className='t4'>
                         {/* Render action buttons (edit and delete) */}

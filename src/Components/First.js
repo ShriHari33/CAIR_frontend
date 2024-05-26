@@ -8,6 +8,8 @@ import withAuth from './withAuth';
 function First() {
   return (
     <div>
+
+      {/* <h1 className="welcome-message">Welcome {localStorage.getItem('facultyName') ? localStorage.getItem('facultyName') : "User"}</h1> */}
       <Navbar></Navbar>
 
       <Sidenav></Sidenav>
