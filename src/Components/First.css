@@ -121,7 +121,7 @@ body {
   border-radius: 3px;
   cursor: pointer;
   margin-top: 35%;
-  margin-left: 290%;
+  margin-left: 282%;
   width: 150%;
   font-size: 25px;
 }
@@ -821,4 +821,3 @@ sidenav {
 .search-bar:hover {
   border-color: #007BFF;
 }
-

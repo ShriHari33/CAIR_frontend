@@ -15,6 +15,7 @@ const Table = () => {
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedDomain, setSelectedDomain] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedType, setSelectedType] = useState("");
 
   useEffect(() => {
     fetchCairDetails();
@@ -135,7 +136,18 @@ const Table = () => {
           <tr>
             <th>Sl.No</th>
             <th>Project Title</th>
-            <th>Project Type</th>
+            <th>
+              <select value={selectedType} onChange={(e) => setSelectedType(e.target.value)}>
+                <option value="">All Types</option>
+                <option value="miniProj">Mini Project</option>
+                <option value="REU">REU</option>
+                <option value="SDP">SDP</option>
+                <option value="minorProject1">Minor Project 1</option>
+                <option value="minorProject2">Minor Project 2</option>
+                <option value="Internship">Internship</option>
+                {/* Add more options as needed */}
+              </select>
+            </th>
 
             <th className='t3'>
               <select value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)}>
@@ -168,7 +180,12 @@ const Table = () => {
               const slNo = index * cairs.length + projectIndex + 1;
               // Check if search year matches project year or if search year is empty.
               // The search can happen with just the last 2 digits of the year as well, to be more flexible.
-              if ((selectedYear === '' || project.year === selectedYear) && (selectedDomain === '' || project.domain === selectedDomain) && (searchTerm === '' || (project.pname && project.pname.toLowerCase().includes(searchTerm.toLowerCase())))) {
+              if (
+                (selectedYear === '' || project.year === selectedYear) &&
+                (selectedDomain === '' || project.domain === selectedDomain) &&
+                (selectedType === '' || project.projectType === selectedType) &&
+                (searchTerm === '' || (project.pname && project.pname.toLowerCase().includes(searchTerm.toLowerCase())))
+              ) {
                 return (
                   <tr key={`${index}-${projectIndex}`}>
                     <td>{slNo}</td>
