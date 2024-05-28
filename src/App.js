@@ -31,7 +31,8 @@ function App() {
           <Route path="/First" element={<First />} />
           <Route path="/Addproject" element={<Addproject />} />
           <Route path="/Navbar" element={<Navbar />} />
-          <Route path="/Adddoc/:cairId/projects/:projectIndex" element={<Adddoc />} />
+          {/* <Route path="/Adddoc/:cairId/projects/:projectIndex" element={<Adddoc />} /> */}
+          <Route path="/Adddoc/:cairId/projects/:projectIndex/:typeOfUpload" element={<Adddoc />} />
           <Route path="/cair/:cairId/projects/:projectIndex" element={<Edit />} />
           <Route path="/cairdet/:cairId/projects/:projectIndex" element={<Projectdet />} />
           <Route path="/Dashboard" element={<Dashboard />} />

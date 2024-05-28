@@ -107,7 +107,7 @@ const Table = () => {
         />
 
         <div>
-          <h1 style={{ margin: -40, marginTop: '-15%' }}>Welcome {localStorage.getItem('facultyName') ? localStorage.getItem('facultyName') + "!" : "User!"}</h1>
+          <h1 style={{ margin: -40, marginTop: '-5%', marginLeft: '-50%' }}>Welcome {localStorage.getItem('facultyName') ? localStorage.getItem('facultyName') + "!" : "User!"}</h1>
         </div>
 
         <div>
@@ -153,11 +153,11 @@ const Table = () => {
               <select value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)}>
 
                 <option value="" >All Years</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
+                <option value="2020">2019-2020</option>
+                <option value="2021">2020-2021</option>
+                <option value="2022">2021-2022</option>
+                <option value="2023">2022-2023</option>
+                <option value="2024">2023-2024</option>
 
               </select>
             </th>

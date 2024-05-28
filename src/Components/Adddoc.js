@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 function Edit() {
   const navigate = useNavigate();
-  const { cairId, projectIndex } = useParams(); // Get cairId and projectIndex from URL params
+  const { cairId, projectIndex, typeOfUpload } = useParams(); // Get cairId and projectIndex from URL params
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState("");
 
@@ -39,7 +39,7 @@ function Edit() {
     formData.append("files", file); // Ensure that 'files' matches the parameter name expected by the backend
     try {
       const response = await axios.post(
-        `http://localhost:8084/api/v1/cair/${cairId}/projects/${projectIndex}/upload`,
+        `http://localhost:8084/api/v1/cair/${cairId}/projects/${projectIndex}/${typeOfUpload}/upload`,
         formData,
         {
           headers: {
@@ -53,7 +53,8 @@ function Edit() {
       // Optionally, you can navigate to another page or display a success message here
     } catch (error) {
       console.error("Error uploading file:", error);
-      // Optionally, you can display an error message to the user here
+      // Optionally, you can display an error message to the user here, which we do below
+      alert("Error uploading file");
     }
   };
   return (
@@ -62,7 +63,7 @@ function Edit() {
       <Sidenav1 />
 
       <form onSubmit={handleSubmit}>
-      
+
         <div className="drag-area">
           <div className="icon">
             <i className="fas fa-cloud-upload-alt"></i>

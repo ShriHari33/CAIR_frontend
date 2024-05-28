@@ -13,6 +13,11 @@ const ProjectDetails = () => {
   const { cairId, projectIndex } = useParams();
   const [project, setProject] = useState(null);
 
+  const [reportPresentationFile, setReportPresentationFile] = useState(null);
+  const [researchPaperFile, setResearchPaperFile] = useState(null);
+  const [referencesFiles, setReferencesFiles] = useState([]);
+  const [otherFiles, setOtherFiles] = useState([]);
+
   useEffect(() => {
     fetchProjectDetails();
   }, [cairId, projectIndex]);
@@ -76,11 +81,26 @@ const ProjectDetails = () => {
           </div>
 
           <h2 className="subtitle">
-                Files{" "}
-                <Link to={`/Adddoc/${cairId}/projects/${projectIndex}`} title="Upload Files" >
-                  <img src={adddoc} alt="Adddoc" className="icon1" />
-                </Link>
-              </h2>
+            Files{" "}
+            <div className="upload-buttons">
+              {/* <Link to={`/Adddoc/${cairId}/projects/${projectIndex}`} title="Upload Files" >
+                <img src={adddoc} alt="Adddoc" className="icon1" />
+              </Link> */}
+              {/* <br></br> */}
+              <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/report`} title="Upload Report Presentation">
+                <button>Upload Report Presentation</button>
+              </Link>
+              <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/researchPaper`} title="Upload Research Paper">
+                <button>Upload Research Paper</button>
+              </Link>
+              <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/references`} title="Upload References">
+                <button>Upload References</button>
+              </Link>
+              <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/otherFiles`} title="Upload Other Files">
+                <button>Upload Other Files</button>
+              </Link>
+            </div>
+          </h2>
           {project.file && (
             <div className="files-box">
               {/* <h2 className="subtitle">
@@ -101,7 +121,7 @@ const ProjectDetails = () => {
                     <tr key={fileIndex} className="file-item">
                       <td>
                         <a
-                          href={`http://localhost:8084/api/v1/cair/${cairId}/projects/${projectIndex}/file/${file.fileName}`} title="View file" 
+                          href={`http://localhost:8084/api/v1/cair/${cairId}/projects/${projectIndex}/file/${file.fileName}`} title="View file"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -114,11 +134,11 @@ const ProjectDetails = () => {
                           alt="Delete file"
                           className="icon"
                           onClick={() => handleFileDelete(file.fileName)}
-                          title="Delete" 
+                          title="Delete"
                         />
                         <a
                           href={`http://localhost:8084/api/v1/cair/${cairId}/projects/${projectIndex}/file/${file.fileName}/download`}
-                          title="Download file" 
+                          title="Download file"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
