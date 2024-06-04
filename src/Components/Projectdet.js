@@ -8,6 +8,8 @@ import adddoc from "./adddoc.png";
 import "./First.css";
 import download from "./download.png";
 import delete11 from "./delete11.png";
+import Dashboard from './Dashboard';
+import First from './First';
 
 const ProjectDetails = () => {
   const { cairId, projectIndex } = useParams();

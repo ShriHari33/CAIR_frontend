@@ -7,6 +7,8 @@ import Navbar from "./Navbar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import search from "./search.png";
+import Dashboard from './Dashboard';
+import First from './First';
 
 
 function Addproject() {
@@ -22,7 +24,7 @@ function Addproject() {
   const [mobile, setMobile] = useState("");
   const [semail, setSemail] = useState("");
   const [selectedSemester, setSelectedSemester] = useState("");
-
+  const [quartile, setQuartile] = useState("");
 
   useEffect(() => {
     loadCairData();
@@ -107,6 +109,7 @@ function Addproject() {
       setSname("");
       setMobile("");
       setSemail("");
+      setQuartile("");
       setStudents([]);
     } catch (error) {
       console.error("Error adding project:", error);
@@ -140,6 +143,9 @@ function Addproject() {
     navigate("/Addproject");
   };
 
+  const redir = () => {
+    navigate("/First");
+  };
 
   return (
     <div>
@@ -213,6 +219,17 @@ function Addproject() {
               </div>
             </div>
 
+            <div className="project">
+              <h3>Quartile</h3>
+              <select value={quartile} onChange={(e) => setQuartile(e.target.value)} required>
+                <option value="0">Select Quartile</option>
+                <option value="Q1">Q1</option>
+                <option value="Q2">Q2</option>
+                <option value="Q3">Q3</option>
+                <option value="Q4">Q4</option>
+              </select>
+            </div>
+
             <div className="custom-select">
               <h3>Student Details</h3>
             </div>
@@ -277,8 +294,9 @@ function Addproject() {
               Add New Student
             </button>
 
+
             <div className="but">
-              <button type="button" className="b1">
+              <button type="button" className="b1" onClick={redir}>
                 Cancel
               </button>
               <button type="button" className="b2" onClick={save}>

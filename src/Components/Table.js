@@ -7,7 +7,6 @@ import axios from 'axios';
 import search from "./search.png";
 import { useNavigate } from "react-router-dom";
 
-
 const Table = () => {
   const [cairs, setCairs] = useState([]); // Initialize to an empty array
   // const [searchYear, setSearchYear] = useState('');
@@ -98,17 +97,17 @@ const Table = () => {
           <img src={search} alt="Search" />
         </div> */}
 
-        <input
+        {/* <input
           type="text"
           className="search-bar"
           placeholder="Search by project name"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        /> */}
 
-        <div>
+        {/* <div>
           <h1 style={{ margin: -40, marginTop: '-5%', marginLeft: '-50%' }}>Welcome {localStorage.getItem('facultyName') ? localStorage.getItem('facultyName') + "!" : "User!"}</h1>
-        </div>
+        </div> */}
 
         <div>
           <button className="button" onClick={handleAddProjectClick}>

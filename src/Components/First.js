@@ -19,4 +19,5 @@ function First() {
   );
 }
 
-export default withAuth(First);
+// export default withAuth(First);
+export default First;
