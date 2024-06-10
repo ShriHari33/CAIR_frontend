@@ -90,16 +90,16 @@ const ProjectDetails = () => {
               </Link> */}
               {/* <br></br> */}
               <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/report`} title="Upload Report Presentation">
-                <button>Upload Report Presentation</button>
+                <button style={{ backgroundColor: 'red', color: 'white' }}>Upload Report Presentation</button>
               </Link>
               <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/researchPaper`} title="Upload Research Paper">
-                <button>Upload Research Paper</button>
+                <button style={{ backgroundColor: 'red', color: 'white' }}>Upload Research Paper</button>
               </Link>
               <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/references`} title="Upload References">
-                <button>Upload References</button>
+                <button style={{ backgroundColor: 'red', color: 'white' }}>Upload References</button>
               </Link>
               <Link to={`/Adddoc/${cairId}/projects/${projectIndex}/otherFiles`} title="Upload Other Files">
-                <button>Upload Other Files</button>
+                <button style={{ backgroundColor: 'red', color: 'white' }}>Upload Other Files</button>
               </Link>
             </div>
           </h2>

@@ -89,7 +89,6 @@ function Addproject() {
         email: localStorage.getItem("email"),
         password: localStorage.getItem("password"),
         confirmPassword: localStorage.getItem("confirmPassword"),
-        // projects: [...projects, newProject] // Send the updated projects array to the backend
         projects: [newProject] // Send the updated projects array to the backend
       });
 

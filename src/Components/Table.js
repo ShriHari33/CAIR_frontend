@@ -34,30 +34,6 @@ const Table = () => {
     }
   };
 
-  // const handleSearchChange = (e) => {
-  //   setSearchYear(e.target.value);
-  // };
-
-  // const handleDelete = async (cairId, projectIndex) => {
-  //   try {
-  //     const response = await fetch(`http://localhost:8084/api/v1/cair/${cairId}/projects/${projectIndex}`, {
-  //       method: 'DELETE',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       }
-  //     });
-  //     if (response.ok) {
-  //       // Refresh data or update state after successful deletion
-  //       fetchCairDetails();
-  //     } else {
-  //       // Handle error response
-  //       console.error('Failed to delete project:', response.statusText);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error deleting project:', error);
-  //   }
-  // };
-
   const handleDelete = async (cairId, projectIndex) => {
     // Show confirmation dialog
     const confirmDelete = window.confirm('Do you want to delete this project?');
@@ -97,17 +73,17 @@ const Table = () => {
           <img src={search} alt="Search" />
         </div> */}
 
-        {/* <input
+        <input
           type="text"
           className="search-bar"
           placeholder="Search by project name"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-        /> */}
+        />
 
-        {/* <div>
+        <div>
           <h1 style={{ margin: -40, marginTop: '-5%', marginLeft: '-50%' }}>Welcome {localStorage.getItem('facultyName') ? localStorage.getItem('facultyName') + "!" : "User!"}</h1>
-        </div> */}
+        </div>
 
         <div>
           <button className="button" onClick={handleAddProjectClick}>

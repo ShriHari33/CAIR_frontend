@@ -13,7 +13,8 @@ import Adddoc from "./Components/Adddoc";
 import Projectdet from "./Components/Projectdet";
 import Dashboard from "./Components/Dashboard";
 import Publications from "./Components/Publications";
-
+import Publish from "./Components/Publish";
+import ViewPublished from "./Components/ViewPublished";
 
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
           <Route path="/cair/:cairId/projects/:projectIndex" element={<Edit />} />
           <Route path="/cairdet/:cairId/projects/:projectIndex" element={<Projectdet />} />
           <Route path="/Dashboard" element={<Dashboard />} />
-
+          <Route path="/Publish" element={<Publish />} />
+          <Route path="/ViewPublished" element={<ViewPublished />} />
 
         </Routes>
 

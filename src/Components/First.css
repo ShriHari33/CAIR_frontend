@@ -578,6 +578,14 @@ sidenav {
   padding: 0 15px;
 }
 
+.sidenav .nav-section2 {
+  padding: 0 10px;
+}
+
+.sidenav .nav-section3 {
+  padding: 0 px;
+}
+
 .sidenav h2 {
   font-size: 23px;
   color: #939393;
