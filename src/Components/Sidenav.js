@@ -38,10 +38,10 @@ function Sidenav() {
           </a>
 
 
-          <a href="./ViewPublished">
+          {/* <a href="./ViewPublished">
             <i class="icon-medicines"></i>
             View Published
-          </a>
+          </a> */}
 
         </div>
       </div>

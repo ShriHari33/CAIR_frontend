@@ -218,7 +218,7 @@ function Addproject() {
               </div>
             </div>
 
-            <div className="project">
+            {/* <div className="project">
               <h3>Quartile</h3>
               <select value={quartile} onChange={(e) => setQuartile(e.target.value)} required>
                 <option value="0">Select Quartile</option>
@@ -227,7 +227,7 @@ function Addproject() {
                 <option value="Q3">Q3</option>
                 <option value="Q4">Q4</option>
               </select>
-            </div>
+            </div> */}
 
             <div className="custom-select">
               <h3>Student Details</h3>

@@ -120,7 +120,7 @@ const Login = () => {
     }
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     // Find user by email
@@ -142,6 +142,39 @@ const Login = () => {
     // Save email to local storage
     localStorage.setItem("email", email);
     localStorage.setItem("facultyName", user.name);
+
+    try {
+      // Replace URL with your backend's login endpoint
+      const response = await axios.post("http://localhost:8084/api/v1/cair/login", {
+        email,
+        password
+      });
+
+      // Assuming the response includes user data and a token
+      if (response.data && response.data.token) {
+        toast.success("Login successful");
+
+        // Save token and user details to local storage or context for future requests
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("email", email);
+        localStorage.setItem("facultyName", response.data.name);
+
+        // Check user role and navigate accordingly
+        if (response.data.role === "admin") {
+          navigate("/First"); // Adjust the path as needed
+        } else {
+          // Navigate to a different page or handle non-admin users differently
+          navigate("/First"); // Adjust the path as needed
+        }
+      } else {
+        // Handle login failure
+        toast.error("Login failed. Please check your credentials.");
+      }
+    } catch (error) {
+      // Handle errors, e.g., network issues, server errors
+      console.error("Login error:", error);
+      toast.error("An error occurred during login. Please try again later.");
+    }
 
     // const response = axios.get("http://localhost:8084/api/v1/cair/faculty/${email}");
 

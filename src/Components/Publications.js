@@ -40,26 +40,28 @@ function ResearchPapersComponent() {
                 </thead>
                 <tbody>
                     {researchPapers && researchPapers.flatMap(paper =>
-                        paper.projects && paper.projects.map((project, index) => (
-                            <tr key={`${paper.name}-${project.pname}`}>
-                                <td class="sl-no">{index + 1}</td>
-                                <td className="project-name">
-                                    {project.file && project.file[0] && project.file[0].fileName ?
-                                        <a href={`http://localhost:8084/api/v1/cair/${paper._id}/projects/${index}/file/${project.file[0].fileName}`} download>{project.pname}</a>
-                                        :
-                                        project.pname
-                                    }
-                                </td>
-                                <td>{project.year}</td>
-                                <td>{project.domain}</td>
-                                <td>
-                                    {project.students && project.students.map(student =>
-                                        student.sname.charAt(0).toUpperCase() + student.sname.slice(1)
-                                    ).join(", ")}
-                                </td>
-                                <td className="faculty-name">{paper.name}</td>
-                            </tr>
-                        ))
+                        paper.projects && paper.projects
+                            .filter(project => project.published) // Filter to only include published projects
+                            .map((project, index) => (
+                                <tr key={`${paper.name}-${project.pname}`}>
+                                    <td className="sl-no">{index + 1}</td>
+                                    <td className="project-name">
+                                        {project.file && project.file[0] && project.file[0].fileName ?
+                                            <a href={`http://localhost:8084/api/v1/cair/${paper._id}/projects/${index}/file/${project.file[0].fileName}`} download>{project.pname}</a>
+                                            :
+                                            project.pname
+                                        }
+                                    </td>
+                                    <td>{project.year}</td>
+                                    <td>{project.domain}</td>
+                                    <td>
+                                        {project.students && project.students.map(student =>
+                                            student.sname.charAt(0).toUpperCase() + student.sname.slice(1)
+                                        ).join(", ")}
+                                    </td>
+                                    <td className="faculty-name">{paper.name}</td>
+                                </tr>
+                            ))
                     )}
                 </tbody>
             </table>
